@@ -41,7 +41,11 @@ class ProgressCircleView: UIView {
     var circleColor:UIColor = UIColor.black
     
     @IBInspectable
-    var progressColor:UIColor = UIColor.yellow
+    var progressColor:UIColor = UIColor.yellow {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     @IBInspectable
     var targetColor:UIColor = UIColor.green
